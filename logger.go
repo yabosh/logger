@@ -61,7 +61,7 @@ func GetLevel() int {
 
 // Log sends output to the standard logger.  Arguments are handled in the manner of fmt.Println
 func Log(level int, format string, v ...interface{}) {
-	if logLevel > level {
+	if logLevel < level {
 		return
 	}
 
